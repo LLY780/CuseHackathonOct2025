@@ -29,11 +29,11 @@ def get_data():
     #This is where function call will go to detect bias
     prediction_result = read.predict_text(clientUrl)
     prediction_string = prediction_result[0] + str(prediction_result[1])
-    print("Prediction: " + prediction_string)
 
     # Create a Python dictionary to send back as JSON
     response_data = {
-        "message": prediction_result
+        "message": prediction_result,
+        "site_url_used": clientUrl
     }
 
 

@@ -9,6 +9,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const fetchButton = document.getElementById('fetch-button');
   const resultDisplay = document.getElementById('result-display');
+  const urlDisplay = document.getElementById('url-display');
 
   // Add a click listener to the button
   // Gets data from server on click
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
 
       // Display the message from the server
+      urlDisplay.textContent = data.site_url_used;
       resultDisplay.textContent = data.message;
 
     } catch (error) {

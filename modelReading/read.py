@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load model + tokenizer + label encoder + constants
 
-OUTPUT_DIR = Path("./model")
+OUTPUT_DIR = Path("../modelTraining/model")
 
 model = keras.models.load_model(OUTPUT_DIR/"model.keras")
 

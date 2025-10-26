@@ -22,6 +22,15 @@
     button:hover {  /* This changes button color when hovered over */
       background-color: #0056b3;
     }
+    #url-display{
+      margin-top: 15px;
+      font-size: 14px;
+      min-height: 40px;
+      padding: 8px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+      word-wrap: break-word;
+    }
     #result-display {
       margin-top: 15px;
       font-size: 14px;
@@ -36,6 +45,7 @@
 <body>
   <h3>Bias Prediction Model</h3>
   <button id="fetch-button">Run Prediction</button>
+  <div id="url-display"> </div>
   <div id="result-display"> </div>
 
   <script src="fetchData.js"></script>
