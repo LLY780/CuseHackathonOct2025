@@ -1,3 +1,4 @@
+import read
 from flask import Flask, jsonify
 from flask_cors import CORS
 
@@ -20,6 +21,7 @@ CORS(app)
 @app.route('/get-data')
 def get_data():
 
+    read.predict_url(#get url form web)
     '''
 
     This is where function call will go to detect bias
