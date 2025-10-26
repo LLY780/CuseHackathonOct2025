@@ -32,7 +32,7 @@ def get_data():
 
     # Create a Python dictionary to send back as JSON
     response_data = {
-        "message": prediction_result,
+        "message": prediction_string,
         "site_url_used": clientUrl
     }
 
