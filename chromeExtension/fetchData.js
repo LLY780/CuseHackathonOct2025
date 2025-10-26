@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
 
       // Display the message from the server
-      urlDisplay.textContent = data.site_url_used;
+      //urlDisplay.textContent = data.site_url_used;
       resultDisplay.textContent = data.message;
 
     } catch (error) {
