@@ -21,10 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
   async function fetchDataFromServer() {
     resultDisplay.textContent = 'Contacting server...';
 
+    //Code for getting the URL using chrome.tabs API
+    const tabs = await chrome.tabs.query({active: true, currentWindow: true});
+    const currentTabUrl = tabs[0].url; //Gets url from tabs
+
     try {
       // Make the API call to the server
       // Call server route /get-data
-      const response = await fetch('http://127.0.0.1:5000/get-data');
+      const response = await fetch('http://127.0.0.1:5000/get-data', {
+          //Below sends the url to the server as a json
+          method: 'Post',
+          headers: {
+              'content-Type': 'application/json'
+          },
+          body: JSON.stringify({url: currentTabUrl})
+      });
 
       // Check if the server responded successfully
       if (!response.ok) {

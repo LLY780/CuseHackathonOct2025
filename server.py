@@ -1,5 +1,5 @@
 import read
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 #Flask is for server
@@ -18,21 +18,22 @@ CORS(app)
 # Define the API route '/get-data'
 # Full route is http://127.0.0.1:5000/get-data by default
 # This is what fetchData.js connects to
-@app.route('/get-data')
+@app.route('/get-data', methods=['post'])
 def get_data():
 
-    read.predict_url(#get url form web)
-    '''
+    data = request.get_json()
+    clientUrl = data.get('url')
+    if not clientUrl:
+        return jsonify({"message": "Error: No URL was provided"}), 400
 
-    This is where function call will go to detect bias
-
-    '''
-
-    print("Python function '/get-data' was executed")
+    #This is where function call will go to detect bias
+    prediction_result = read.predict_text(clientUrl)
+    prediction_string = prediction_result[0] + prediction_result[1]
+    print("Prediction: " + prediction_string)
 
     # Create a Python dictionary to send back as JSON
     response_data = {
-        "message": "Response will go here"
+        "message": prediction_result
     }
 
 
@@ -41,6 +42,7 @@ def get_data():
     # Flask's jsonify() turns the Python dict into a
     # JSON response that JavaScript can read
     return jsonify(response_data)
+
 
 
 # Runs the app
