@@ -27,7 +27,7 @@ EMBED_DIM = 128
 BATCH_SIZE = 64
 EPOCHS = 20
 LEARNING_RATE = 1e-3
-OUTPUT_DIR = Path("./saved_bias_model")
+OUTPUT_DIR = Path("./model")
 
 
 # Helper Functions
