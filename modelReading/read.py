@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load model + tokenizer + label encoder + constants
 
-OUTPUT_DIR = Path("../modelTraining/model")
+OUTPUT_DIR = Path("./model")
 
 model = keras.models.load_model(OUTPUT_DIR/"model.keras")
 
@@ -80,4 +80,5 @@ def main():
 # Run from command line
 
 if __name__ == "__main__":
-    main()
+    # main()
+    predict_url("https://apnews.com/article/new-jersey-police-officer-charged-murder-atm-pizza-b3d7767d209b2942ffcdc07d6743c811")
