@@ -1,1 +1,18 @@
 Push and Pull project files for CuseHacks Hackathon 2025
+
+# Training the classification model
+  Download and run the train.py python file
+  The file will create a model folder in the current directory
+  This model folder will be used for reading text and url
+  The folder must be in the same directory as read.py
+
+# Reading text and getting predictions
+  Download and run the read.py and scrape.py python files
+  Run the read.py file using command line arguments
+  read.py takes either a article url or string of text
+  The file prints out the probability distribution
+
+# Using the chrome extension
+  Download the server.py and chromeExtension folder
+  The server.py file and chromeExtension folder must be in the same directory as read.py
+  
