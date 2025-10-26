@@ -52,7 +52,7 @@ def predict_text(text):
 
 def predict_url(url):
     '''Calls predict_text with url text converted'''
-    predict_text(scrape.getText(url))
+    return predict_text(scrape.getText(url))
 
 def main():
     parser = argparse.ArgumentParser(
