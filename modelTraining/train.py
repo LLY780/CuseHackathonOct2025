@@ -78,7 +78,7 @@ def main():
     # 6. Build model
     num_classes = len(label_encoder.classes_)
     model = Sequential([
-        Embedding(input_dim=VOCAB_SIZE, output_dim=EMBED_DIM, input_length=MAX_LEN, embeddings_initializer="uniform", trainable=True),
+        Embedding(input_dim=VOCAB_SIZE, output_dim=EMBED_DIM, embeddings_initializer="uniform", trainable=True),
         Conv1D(filters=128, kernel_size=5, padding="same", activation="relu"),
         GlobalMaxPooling1D(),
         Dense(128, activation="relu"),
