@@ -80,5 +80,4 @@ def main():
 # Run from command line
 
 if __name__ == "__main__":
-    # main()
-    predict_url("https://apnews.com/article/new-jersey-police-officer-charged-murder-atm-pizza-b3d7767d209b2942ffcdc07d6743c811")
+    main()
