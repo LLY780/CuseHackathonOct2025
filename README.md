@@ -10,12 +10,14 @@ Run the following command to install all required Python libraries:
 
 pip install -r requirements.txt
 
-## How to Install the Model
+## How to Download the Model
 Open the following google drive link: https://drive.google.com/drive/folders/1y7pyStyPvBOWNnyIcH1Qu1YADEhUqxR3?usp=drive_link
 
 Download the model folder
 
-Place the model folder in the same directory as read.py
+Place the zipped folder in the same directory as read.py
+
+Unzip the folder
 
 ## How to Set Up the Chrome Extension (Frontend)
 Open Google Chrome, type chrome://extensions into the address bar, and press Enter.
