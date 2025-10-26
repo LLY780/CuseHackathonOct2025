@@ -5,7 +5,7 @@ import keras
 from keras import ops
 
 import pandas as pd
-fileName = "bias_clean.csv"
+fileName = "../../Downloads/bias_clean.csv"
 
 import nltk
 from nltk.corpus import stopwords
@@ -17,10 +17,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Reload everything (if running in new session)
-model = load_model("model.keras")
-with open("tokenizer.pkl", "rb") as f:
+model = load_model("model 1.keras")
+with open("../../Downloads/tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
-with open("label_encoder.pkl", "rb") as f:
+with open("../../Downloads/label_encoder.pkl", "rb") as f:
     label_encoder = pickle.load(f)
 
 # Text cleaner (same one you used earlier)
@@ -56,5 +56,7 @@ def readText(x): #int of the row starting at 1
     if df.loc[x-1, "page_text"] == "Error fetching article":
         return "empty"
     return df.loc[x-1,"page_text"]
-print(readText(17))
-predict_bias(readText(17))
+import Scrapper as sc
+# e.g "https://www.cnn.com/2025/10/25/business/trump-tariffs-canada-reagan"
+url = input("What\'s your url?: ")
+predict_bias(sc.getText(url))
