@@ -10,9 +10,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load model + tokenizer + label encoder + constants
 
-OUTPUT_DIR = Path("./saved_bias_model")
+OUTPUT_DIR = Path("./model")
 
-model = keras.models.load_model(OUTPUT_DIR/"bias_cnn_model.keras")
+model = keras.models.load_model(OUTPUT_DIR/"model.keras")
 
 f = open(OUTPUT_DIR/"tokenizer.pkl", "rb")
 tokenizer = pickle.load(f)

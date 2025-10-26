@@ -1,12 +1,15 @@
 {
   "name": "Political Bias Detector",
-  "description": "Pulls data from a local Python Flask server running political bias sequential neural network.",
+  "description": "Pulls data from a local Python Flask server...",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "extension.html",
     "default_icon": "logo.png"
   },
+  "permissions": [
+    "tabs"
+  ],
   "host_permissions": [
     "http://127.0.0.1:5000/*"
   ]
