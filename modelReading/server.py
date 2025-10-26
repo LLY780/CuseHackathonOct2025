@@ -27,7 +27,7 @@ def get_data():
         return jsonify({"message": "Error: No URL was provided"}), 400
 
     #This is where function call will go to detect bias
-    prediction_result = read.predict_text(clientUrl)
+    prediction_result = read.predict_url(clientUrl)
     prediction_string = prediction_result[0] + str(prediction_result[1])
 
     # Create a Python dictionary to send back as JSON
