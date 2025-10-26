@@ -1,4 +1,0 @@
-Google drive link contains model files from training, used for reading urls and text
-Model files can also be created by running files located in modelTraining
-
-https://drive.google.com/drive/folders/1y7pyStyPvBOWNnyIcH1Qu1YADEhUqxR3?usp=drive_link
