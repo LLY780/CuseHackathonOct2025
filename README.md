@@ -1,4 +1,7 @@
 Push and Pull project files for CuseHacks Hackathon 2025
+
+Created by: Thomas Allen, Salaheddine Bourhim, Aiden Kayizzi, Luke Ly
+
 # Setup
 
 ## How to Install Required Packages
