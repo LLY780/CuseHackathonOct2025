@@ -1,4 +1,4 @@
-Push and Pull project files for CuseHacks Hackathon 2025
+Push and pull project files for CuseHacks 2025
 
 Created by: Thomas Allen, Salaheddine Bourhim, Aiden Kayizzi, Luke Ly
 
