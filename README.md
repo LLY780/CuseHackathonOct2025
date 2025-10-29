@@ -20,7 +20,9 @@ Download the model folder
 
 Place the zipped folder in the same directory as read.py
 
-Unzip the folder
+Unzip the folder, it will contain a "model" folder
+
+Move the model folder into the parent directory and delete the zip file and unzipped folder
 
 ## How to Set Up the Chrome Extension (Frontend)
 Open Google Chrome, type chrome://extensions into the address bar, and press Enter.
