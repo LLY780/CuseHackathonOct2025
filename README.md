@@ -48,6 +48,8 @@ Run server py, this is what connects to the extension and must be running for it
 ## Training the classification model
 You can train the model for yourself following the steps below.
 
+Download the data set from the folling link: https://www.kaggle.com/datasets/gandpablo/news-articles-for-political-bias-classification
+
 Download and run the train.py python file
 
 The file will create a model folder in the current directory
